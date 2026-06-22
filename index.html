@@ -81,6 +81,14 @@ td.prod{min-width:280px;}
 .brand-tag.pulsetto{background:rgba(48,15,5,.08);color:var(--wine);}
 .brand-tag.google{background:rgba(214,199,168,.4);color:var(--wine);}
 .brand-tag.blueprint{background:rgba(48,15,5,.15);color:var(--wine);}
+.brand-tag.poubel{background:rgba(214,199,168,.65);color:var(--wine);}
+
+/* SHIPPING TAGS */
+.ship-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;padding:2px 9px;border-radius:2px;white-space:nowrap;}
+.ship-bestship{background:rgba(128,36,36,.12);color:var(--burgundy);}
+.ship-shiptothai{background:var(--wine);color:var(--gold);}
+.ship-thaismile{background:rgba(214,199,168,.55);color:var(--wine);}
+.ship-bestuk{border:1px solid var(--burgundy);color:var(--burgundy);}
 td.qty-cell{text-align:right;font-family:var(--mono);font-size:18px;font-weight:800;color:var(--wine);white-space:nowrap;}
 td.eta-cell{text-align:right;white-space:nowrap;}
 .eta-pill{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px;background:rgba(214,199,168,.3);color:var(--wine);border:1px solid rgba(214,199,168,.5);}
@@ -132,7 +140,7 @@ footer{text-align:center;padding:20px;font-size:10px;font-weight:700;letter-spac
 
   /* table: horizontal scroll */
   .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:8px;}
-  table{min-width:520px;}
+  table{min-width:640px;}
 
   /* search + table header */
   .table-header{flex-wrap:wrap;gap:8px;}
@@ -153,7 +161,7 @@ footer{text-align:center;padding:20px;font-size:10px;font-weight:700;letter-spac
     <div class="hdr-title-row">
       <span class="hdr-title">แดชบอร์ดสถานะสินค้า</span>
       <span class="hdr-sep">—</span>
-      <span class="hdr-sub">ติดตามสินค้าที่รอเข้าไทย · รวมยอดจากทุกออเดอร์ (WHOOP · blueprint · Pulsetto · Google)</span>
+      <span class="hdr-sub">ติดตามสินค้าที่รอเข้าไทย · รวมยอดจากทุกออเดอร์ (WHOOP · blueprint · Pulsetto · Google · Poubel)</span>
     </div>
   </div>
   <div class="hdr-time" id="gen-time"></div>
@@ -166,32 +174,32 @@ footer{text-align:center;padding:20px;font-size:10px;font-weight:700;letter-spac
     <div class="stat">
       <div class="icon">🛍️</div>
       <div class="lbl">จำนวนรวมทั้งหมด</div>
-      <div class="val accent">436</div>
+      <div class="val accent">500</div>
       <div class="sub">ชิ้น จากทุกออเดอร์</div>
     </div>
     <div class="stat">
       <div class="icon">🏷️</div>
       <div class="lbl">สินค้าทั้งหมด</div>
-      <div class="val">41</div>
+      <div class="val">48</div>
       <div class="sub">รายการสินค้าไม่ซ้ำ</div>
     </div>
     <div class="stat">
       <div class="icon">📅</div>
       <div class="lbl">รอบการส่ง</div>
-      <div class="val">8</div>
+      <div class="val">11</div>
       <div class="sub">วันส่งสินค้าถึงไทย</div>
     </div>
     <div class="stat">
       <div class="icon">🏢</div>
       <div class="lbl">แบรนด์</div>
-      <div class="val">4</div>
-      <div class="sub">WHOOP · blueprint · Pulsetto · Google</div>
+      <div class="val">5</div>
+      <div class="sub">WHOOP · blueprint · Pulsetto · Google · Poubel</div>
     </div>
     <div class="stat">
       <div class="icon">✈️</div>
       <div class="lbl">ล็อตถัดไป</div>
       <div class="val" style="font-size:20px">21 มิ.ย.</div>
-      <div class="sub">41 ชิ้น กำลังมา</div>
+      <div class="sub">30 ชิ้น กำลังมา</div>
     </div>
   </div>
 
@@ -202,19 +210,19 @@ footer{text-align:center;padding:20px;font-size:10px;font-weight:700;letter-spac
       <div class="circle all-circle" onclick="filterDate('all')" data-date="all">
         <div class="c-icon">🌐</div>
         <div class="c-date">ทั้งหมด</div>
-        <div class="c-qty">436</div>
+        <div class="c-qty">500</div>
         <div class="c-unit">ชิ้น</div>
       </div>
       <div class="circle" onclick="filterDate('21/06')" data-date="21/06">
         <div class="c-icon">⚡</div>
         <div class="c-date">21 มิ.ย. 2026</div>
-        <div class="c-qty">41</div>
+        <div class="c-qty">30</div>
         <div class="c-unit">ชิ้น</div>
       </div>
       <div class="circle" onclick="filterDate('23/06')" data-date="23/06">
         <div class="c-icon">📦</div>
         <div class="c-date">23 มิ.ย. 2026</div>
-        <div class="c-qty">101</div>
+        <div class="c-qty">21</div>
         <div class="c-unit">ชิ้น</div>
       </div>
       <div class="circle" onclick="filterDate('25/06')" data-date="25/06">
@@ -226,19 +234,37 @@ footer{text-align:center;padding:20px;font-size:10px;font-weight:700;letter-spac
       <div class="circle" onclick="filterDate('28/06')" data-date="28/06">
         <div class="c-icon">🎁</div>
         <div class="c-date">28 มิ.ย. 2026</div>
-        <div class="c-qty">125</div>
+        <div class="c-qty">124</div>
         <div class="c-unit">ชิ้น</div>
       </div>
       <div class="circle" onclick="filterDate('30/06')" data-date="30/06">
         <div class="c-icon">🌊</div>
         <div class="c-date">30 มิ.ย. 2026</div>
-        <div class="c-qty">71</div>
+        <div class="c-qty">83</div>
         <div class="c-unit">ชิ้น</div>
       </div>
       <div class="circle" onclick="filterDate('02/07')" data-date="02/07">
         <div class="c-icon">☁️</div>
         <div class="c-date">2 ก.ค. 2026</div>
         <div class="c-qty">50</div>
+        <div class="c-unit">ชิ้น</div>
+      </div>
+      <div class="circle" onclick="filterDate('05/07')" data-date="05/07">
+        <div class="c-icon">🎀</div>
+        <div class="c-date">5 ก.ค. 2026</div>
+        <div class="c-qty">34</div>
+        <div class="c-unit">ชิ้น</div>
+      </div>
+      <div class="circle" onclick="filterDate('07/07')" data-date="07/07">
+        <div class="c-icon">🌅</div>
+        <div class="c-date">7 ก.ค. 2026</div>
+        <div class="c-qty">30</div>
+        <div class="c-unit">ชิ้น</div>
+      </div>
+      <div class="circle" onclick="filterDate('09/07')" data-date="09/07">
+        <div class="c-icon">📬</div>
+        <div class="c-date">9 ก.ค. 2026</div>
+        <div class="c-qty">60</div>
         <div class="c-unit">ชิ้น</div>
       </div>
       <div class="circle" onclick="filterDate('10/07')" data-date="10/07">
@@ -250,7 +276,7 @@ footer{text-align:center;padding:20px;font-size:10px;font-weight:700;letter-spac
       <div class="circle" onclick="filterDate('14/07')" data-date="14/07">
         <div class="c-icon">🫒</div>
         <div class="c-date">14 ก.ค. 2026</div>
-        <div class="c-qty">15</div>
+        <div class="c-qty">35</div>
         <div class="c-unit">ชิ้น</div>
       </div>
     </div>
@@ -270,6 +296,7 @@ footer{text-align:center;padding:20px;font-size:10px;font-weight:700;letter-spac
           <th>ชื่อสินค้า 🏷️</th>
           <th class="r">จำนวนรวม 📦</th>
           <th class="r">วันที่ถึงไทย ✈️</th>
+          <th>เจ้า Shipping 🚚</th>
         </tr>
       </thead>
       <tbody id="tbl-body"></tbody>
@@ -281,6 +308,7 @@ footer{text-align:center;padding:20px;font-size:10px;font-weight:700;letter-spac
           </td>
           <td class="total-val" id="total-val">343</td>
           <td class="total-unit">ชิ้น</td>
+          <td></td>
         </tr>
       </tfoot>
     </table>
@@ -295,93 +323,112 @@ footer{text-align:center;padding:20px;font-size:10px;font-weight:700;letter-spac
 
 </div>
 
-<footer>Longevity Hub · ETA Summary · อัปเดต 19 มิถุนายน 2569 · 41 SKUs ไม่ซ้ำ · 56 รายการส่ง · 436 ชิ้น</footer>
+<footer>Longevity Hub · ETA Summary · อัปเดต 19 มิถุนายน 2569 · 48 SKUs ไม่ซ้ำ · 68 รายการส่ง · 500 ชิ้น</footer>
 
 <script>
 const PRODUCTS = [
-  // [series, variant, brand, qty, etaKey, etaLabel, etaClass]
-  // ── 21 มิ.ย. ──
-  ['5.0 SportFlex Band','CR7 Away (White)','WHOOP',5,'21/06','21 มิ.ย. 2026','soon'],
-  ['5.0 SportFlex Band','CR7 Home (Red)','WHOOP',5,'21/06','21 มิ.ย. 2026','soon'],
-  ['MG SportFlex Band','CR7 Away (White)','WHOOP',10,'21/06','21 มิ.ย. 2026','soon'],
-  ['MG SportFlex Band','CR7 Home (Red)','WHOOP',10,'21/06','21 มิ.ย. 2026','soon'],
-  ['Pulsetto Fit Wearable Wellness Device','','Pulsetto',11,'21/06','21 มิ.ย. 2026','soon'],
-  // ── 23 มิ.ย. ──
-  ['5.0 Drenched SportFlex','Flare','WHOOP',2,'23/06','23 มิ.ย. 2026','soon'],
-  ['5.0 Drenched SportFlex','Pulse','WHOOP',2,'23/06','23 มิ.ย. 2026','soon'],
-  ['5.0 Drenched SportFlex','Riptide','WHOOP',2,'23/06','23 มิ.ย. 2026','soon'],
-  ['5.0 Summer Brights SuperKnit','Lime','WHOOP',10,'23/06','23 มิ.ย. 2026','soon'],
-  ['5.0 Summer Brights SuperKnit','Petal','WHOOP',10,'23/06','23 มิ.ย. 2026','soon'],
-  ['5.0 Summer Brights SuperKnit','Tide','WHOOP',10,'23/06','23 มิ.ย. 2026','soon'],
-  ['5.0 Superknit Luxe Limited','Blush gold','WHOOP',5,'23/06','23 มิ.ย. 2026','soon'],
-  ['MG Summer Brights SuperKnit','Lime','WHOOP',10,'23/06','23 มิ.ย. 2026','soon'],
-  ['MG Summer Brights SuperKnit','Petal','WHOOP',10,'23/06','23 มิ.ย. 2026','soon'],
-  ['MG Summer Brights SuperKnit','Tide','WHOOP',10,'23/06','23 มิ.ย. 2026','soon'],
-  ['MG SuperKnit Luxe Band','Aurora rose gold','WHOOP',5,'23/06','23 มิ.ย. 2026','soon'],
-  ['MG SuperKnit Luxe Band','Forest gold','WHOOP',5,'23/06','23 มิ.ย. 2026','soon'],
-  ['MG SuperKnit Luxe Band','Renewal gold','WHOOP',5,'23/06','23 มิ.ย. 2026','soon'],
-  ['MG SuperKnit Luxe Limited','Blush Silver','WHOOP',10,'23/06','23 มิ.ย. 2026','soon'],
-  ['MG Superknit Luxe Limited','Aqua Rose gold','WHOOP',5,'23/06','23 มิ.ย. 2026','soon'],
-  // ── 25 มิ.ย. ──
-  ['MG Superknit Luxe Limited','Rhodonite Rose gold','WHOOP',5,'25/06','25 มิ.ย. 2026','soon'],
-  ['Pulsetto Fit Wearable Wellness Device','','Pulsetto',10,'25/06','25 มิ.ย. 2026','soon'],
-  // ── 28 มิ.ย. ──
-  ['5.0 SuperKnit Band','Walnut Smoke','WHOOP',11,'28/06','28 มิ.ย. 2026',''],
-  ['5.0 SuperKnit Luxe Band','Walnut Rose gold','WHOOP',10,'28/06','28 มิ.ย. 2026',''],
-  ['5.0 Superknit Luxe Limited','Walnut gold','WHOOP',10,'28/06','28 มิ.ย. 2026',''],
-  ['Google Fitbit Air','Berry','Google',3,'28/06','28 มิ.ย. 2026',''],
-  ['MG SportFlex Band','CR7 Away (White)','WHOOP',10,'28/06','28 มิ.ย. 2026',''],
-  ['MG SportFlex Band','CR7 Home (Red)','WHOOP',10,'28/06','28 มิ.ย. 2026',''],
-  ['MG SuperKnit Band','Walnut Smoke','WHOOP',11,'28/06','28 มิ.ย. 2026',''],
-  ['MG SuperKnit Luxe Band','Walnut Gold','WHOOP',10,'28/06','28 มิ.ย. 2026',''],
-  ['MG SuperKnit Luxe Band','Walnut Rose gold','WHOOP',40,'28/06','28 มิ.ย. 2026',''],
-  ['MG SuperKnit Luxe Band','Walnut Silver','WHOOP',10,'28/06','28 มิ.ย. 2026',''],
-  // ── 30 มิ.ย. ──
-  ['5.0 Drenched SportFlex','Flare','WHOOP',2,'30/06','30 มิ.ย. 2026',''],
-  ['5.0 Drenched SportFlex','Pulse','WHOOP',2,'30/06','30 มิ.ย. 2026',''],
-  ['5.0 Drenched SportFlex','Riptide','WHOOP',2,'30/06','30 มิ.ย. 2026',''],
-  ['5.0 SportFlex Band','Charge','WHOOP',5,'30/06','30 มิ.ย. 2026',''],
-  ['Essential Capsules','','blueprint',3,'30/06','30 มิ.ย. 2026',''],
-  ['Longevity Protein Powder','Chocolate Flavor','blueprint',5,'30/06','30 มิ.ย. 2026',''],
-  ['MG Drenched SportFlex','Flare','WHOOP',7,'30/06','30 มิ.ย. 2026',''],
-  ['MG Drenched SportFlex','Pulse','WHOOP',7,'30/06','30 มิ.ย. 2026',''],
-  ['MG Drenched SportFlex','Riptide','WHOOP',7,'30/06','30 มิ.ย. 2026',''],
-  ['MG SportFlex Band','Charge','WHOOP',10,'30/06','30 มิ.ย. 2026',''],
-  ['MG SuperKnit Luxe Band','Flame with rose gold','WHOOP',5,'30/06','30 มิ.ย. 2026',''],
-  ['MG Superknit Luxe Limited','Blush Rose gold','WHOOP',8,'30/06','30 มิ.ย. 2026',''],
-  ['MG Superknit Luxe Limited','Cloud Rose gold','WHOOP',8,'30/06','30 มิ.ย. 2026',''],
-  // ── 2 ก.ค. ──
-  ['5.0 SuperKnit Luxe Band','Walnut Rose gold','WHOOP',10,'02/07','2 ก.ค. 2026',''],
-  ['5.0 Superknit Luxe Limited','Walnut gold','WHOOP',10,'02/07','2 ก.ค. 2026',''],
-  ['MG SuperKnit Band','Cloud silver','WHOOP',5,'02/07','2 ก.ค. 2026',''],
-  ['MG SuperKnit Luxe Band','Walnut Gold','WHOOP',10,'02/07','2 ก.ค. 2026',''],
-  ['MG SuperKnit Luxe Band','Walnut Rose gold','WHOOP',10,'02/07','2 ก.ค. 2026',''],
-  ['MG SuperKnit Luxe Band','Walnut Silver','WHOOP',5,'02/07','2 ก.ค. 2026',''],
-  // ── 10 ก.ค. ──
-  ['MG SuperKnit Band','Walnut Smoke','WHOOP',6,'10/07','10 ก.ค. 2026',''],
-  ['MG SuperKnit Luxe Band','Aurora rose gold','WHOOP',2,'10/07','10 ก.ค. 2026',''],
-  ['MG SuperKnit Luxe Band','Walnut Silver','WHOOP',5,'10/07','10 ก.ค. 2026',''],
-  ['MG SuperKnit Luxe Limited','Blush Silver','WHOOP',5,'10/07','10 ก.ค. 2026',''],
+  // [series, variant, brand, qty, etaKey, etaLabel, etaClass, shipping]
+  // ── 21 มิ.ย. → Bestship ──
+  ['5.0 SportFlex Band','CR7 Away (White)','WHOOP',5,'21/06','21 มิ.ย. 2026','soon','Bestship'],
+  ['5.0 SportFlex Band','CR7 Home (Red)','WHOOP',5,'21/06','21 มิ.ย. 2026','soon','Bestship'],
+  ['MG SportFlex Band','CR7 Away (White)','WHOOP',10,'21/06','21 มิ.ย. 2026','soon','Bestship'],
+  ['MG SportFlex Band','CR7 Home (Red)','WHOOP',10,'21/06','21 มิ.ย. 2026','soon','Bestship'],
+  // ── 23 มิ.ย. → ThaiSmile / ShipToThai ──
+  ['5.0 Drenched SportFlex','Flare','WHOOP',2,'23/06','23 มิ.ย. 2026','soon','ThaiSmile'],
+  ['5.0 Drenched SportFlex','Pulse','WHOOP',2,'23/06','23 มิ.ย. 2026','soon','ThaiSmile'],
+  ['5.0 Drenched SportFlex','Riptide','WHOOP',2,'23/06','23 มิ.ย. 2026','soon','ThaiSmile'],
+  ['5.0 Superknit Luxe Limited','Blush gold','WHOOP',5,'23/06','23 มิ.ย. 2026','soon','ShipToThai'],
+  ['MG SuperKnit Luxe Limited','Blush Silver','WHOOP',10,'23/06','23 มิ.ย. 2026','soon','ShipToThai'],
+  // ── 25 มิ.ย. → ShipToThai ──
+  ['MG Superknit Luxe Limited','Rhodonite Rose gold','WHOOP',5,'25/06','25 มิ.ย. 2026','soon','ShipToThai'],
+  ['Pulsetto Fit Wearable Wellness Device','','Pulsetto',10,'25/06','25 มิ.ย. 2026','soon','ShipToThai'],
+  // ── 28 มิ.ย. → Bestship ──
+  ['5.0 SuperKnit Band','Walnut Smoke','WHOOP',11,'28/06','28 มิ.ย. 2026','','Bestship'],
+  ['5.0 SuperKnit Luxe Band','Walnut Rose gold','WHOOP',10,'28/06','28 มิ.ย. 2026','','Bestship'],
+  ['5.0 Superknit Luxe Limited','Walnut gold','WHOOP',10,'28/06','28 มิ.ย. 2026','','Bestship'],
+  ['Google Fitbit Air','Berry','Google',2,'28/06','28 มิ.ย. 2026','','Bestship'],
+  ['MG SportFlex Band','CR7 Away (White)','WHOOP',10,'28/06','28 มิ.ย. 2026','','Bestship'],
+  ['MG SportFlex Band','CR7 Home (Red)','WHOOP',10,'28/06','28 มิ.ย. 2026','','Bestship'],
+  ['MG SuperKnit Band','Walnut Smoke','WHOOP',11,'28/06','28 มิ.ย. 2026','','Bestship'],
+  ['MG SuperKnit Luxe Band','Walnut Gold','WHOOP',10,'28/06','28 มิ.ย. 2026','','Bestship'],
+  ['MG SuperKnit Luxe Band','Walnut Rose gold','WHOOP',40,'28/06','28 มิ.ย. 2026','','Bestship'],
+  ['MG SuperKnit Luxe Band','Walnut Silver','WHOOP',10,'28/06','28 มิ.ย. 2026','','Bestship'],
+  // ── 30 มิ.ย. → Best UK / ThaiSmile ──
+  ['5.0 Drenched SportFlex','Flare','WHOOP',2,'30/06','30 มิ.ย. 2026','','Best UK'],
+  ['5.0 Drenched SportFlex','Pulse','WHOOP',2,'30/06','30 มิ.ย. 2026','','Best UK'],
+  ['5.0 Drenched SportFlex','Riptide','WHOOP',2,'30/06','30 มิ.ย. 2026','','Best UK'],
+  ['5.0 SportFlex Band','Charge','WHOOP',5,'30/06','30 มิ.ย. 2026','','ThaiSmile'],
+  ['Essential Capsules','','blueprint',5,'30/06','30 มิ.ย. 2026','','ThaiSmile'],
+  ['Longevity Mix','Blood Orange','blueprint',4,'30/06','30 มิ.ย. 2026','','ThaiSmile'],
+  ['Longevity Protein Powder','Chocolate Flavor','blueprint',5,'30/06','30 มิ.ย. 2026','','ThaiSmile'],
+  ['MG Drenched SportFlex','Flare','WHOOP',7,'30/06','30 มิ.ย. 2026','','ThaiSmile'],
+  ['MG Drenched SportFlex','Pulse','WHOOP',7,'30/06','30 มิ.ย. 2026','','ThaiSmile'],
+  ['MG Drenched SportFlex','Riptide','WHOOP',7,'30/06','30 มิ.ย. 2026','','ThaiSmile'],
+  ['MG SportFlex Band','Charge','WHOOP',10,'30/06','30 มิ.ย. 2026','','ThaiSmile'],
+  ['MG SuperKnit Luxe Band','Flame with rose gold','WHOOP',5,'30/06','30 มิ.ย. 2026','','ThaiSmile'],
+  ['MG Superknit Luxe Limited','Blush Rose gold','WHOOP',8,'30/06','30 มิ.ย. 2026','','ThaiSmile'],
+  ['MG Superknit Luxe Limited','Cloud Rose gold','WHOOP',8,'30/06','30 มิ.ย. 2026','','ThaiSmile'],
+  ['Metabolic Protein Powder','Vanilla Flavor','blueprint',2,'30/06','30 มิ.ย. 2026','','ThaiSmile'],
+  ['NAC + Ginger + Curcumin','','blueprint',4,'30/06','30 มิ.ย. 2026','','ThaiSmile'],
+  // ── 2 ก.ค. → ShipToThai ──
+  ['5.0 SuperKnit Luxe Band','Walnut Rose gold','WHOOP',10,'02/07','2 ก.ค. 2026','','ShipToThai'],
+  ['5.0 Superknit Luxe Limited','Walnut gold','WHOOP',10,'02/07','2 ก.ค. 2026','','ShipToThai'],
+  ['MG SuperKnit Band','Cloud silver','WHOOP',5,'02/07','2 ก.ค. 2026','','ShipToThai'],
+  ['MG SuperKnit Luxe Band','Walnut Gold','WHOOP',10,'02/07','2 ก.ค. 2026','','ShipToThai'],
+  ['MG SuperKnit Luxe Band','Walnut Rose gold','WHOOP',10,'02/07','2 ก.ค. 2026','','ShipToThai'],
+  ['MG SuperKnit Luxe Band','Walnut Silver','WHOOP',5,'02/07','2 ก.ค. 2026','','ShipToThai'],
+  // ── 5 ก.ค. → Bestship (Poubel Charms) ──
+  ['Bag Whoop Charm','','Poubel',5,'05/07','5 ก.ค. 2026','','Bestship'],
+  ['Cherry Whoop Charm','','Poubel',5,'05/07','5 ก.ค. 2026','','Bestship'],
+  ['Fleur Rose Whoop Charm','','Poubel',5,'05/07','5 ก.ค. 2026','','Bestship'],
+  ['Heart-On-Fire Whoop Charm','','Poubel',4,'05/07','5 ก.ค. 2026','','Bestship'],
+  ['Iced Coffee Whoop Charm','','Poubel',5,'05/07','5 ก.ค. 2026','','Bestship'],
+  ['Iced Matcha Whoop Charm','','Poubel',5,'05/07','5 ก.ค. 2026','','Bestship'],
+  ['Padel Whoop Charm','','Poubel',5,'05/07','5 ก.ค. 2026','','Bestship'],
+  // ── 7 ก.ค. → ThaiSmile ──
+  ['MG SuperKnit Luxe Band','Dune with rose gold','WHOOP',20,'07/07','7 ก.ค. 2026','','ThaiSmile'],
+  ['MG SuperKnit Luxe Band','Flame with rose gold','WHOOP',5,'07/07','7 ก.ค. 2026','','ThaiSmile'],
+  ['MG Superknit Luxe Limited','Aqua Rose gold','WHOOP',5,'07/07','7 ก.ค. 2026','','ThaiSmile'],
+  // ── 9 ก.ค. → ShipToThai ──
+  ['5.0 SportFlex Band','Charge','WHOOP',10,'09/07','9 ก.ค. 2026','','ShipToThai'],
+  ['5.0 Summer Brights SuperKnit','Lime','WHOOP',5,'09/07','9 ก.ค. 2026','','ShipToThai'],
+  ['5.0 SuperKnit Band','Walnut Smoke','WHOOP',4,'09/07','9 ก.ค. 2026','','ShipToThai'],
+  ['MG LeatherLuxe Tapered Band','Camel with Gold size S/M','WHOOP',10,'09/07','9 ก.ค. 2026','','ShipToThai'],
+  ['MG SportFlex Band','Charge','WHOOP',10,'09/07','9 ก.ค. 2026','','ShipToThai'],
+  ['MG Summer Brights SuperKnit','Petal','WHOOP',5,'09/07','9 ก.ค. 2026','','ShipToThai'],
+  ['MG Summer Brights SuperKnit','Tide','WHOOP',10,'09/07','9 ก.ค. 2026','','ShipToThai'],
+  ['MG SuperKnit Band','Walnut Smoke','WHOOP',5,'09/07','9 ก.ค. 2026','','ShipToThai'],
+  ['MG SuperKnit Luxe Band','Walnut Silver','WHOOP',1,'09/07','9 ก.ค. 2026','','ShipToThai'],
+  // ── 10 ก.ค. → ShipToThai ──
+  ['MG SuperKnit Band','Walnut Smoke','WHOOP',6,'10/07','10 ก.ค. 2026','','ShipToThai'],
+  ['MG SuperKnit Luxe Band','Aurora rose gold','WHOOP',2,'10/07','10 ก.ค. 2026','','ShipToThai'],
+  ['MG SuperKnit Luxe Band','Walnut Silver','WHOOP',5,'10/07','10 ก.ค. 2026','','ShipToThai'],
+  ['MG SuperKnit Luxe Limited','Blush Silver','WHOOP',5,'10/07','10 ก.ค. 2026','','ShipToThai'],
   // ── 14 ก.ค. ──
-  ['Extra Virgin Olive Oil','','blueprint',15,'14/07','14 ก.ค. 2026',''],
+  ['Extra Virgin Olive Oil','','blueprint',15,'14/07','14 ก.ค. 2026','','ThaiSmile'],
+  ['MG SportFlex Band','CR7 Away (White)','WHOOP',20,'14/07','14 ก.ค. 2026','','Best UK'],
 ];
 
 const BATCHES = [
-  {key:'21/06', label:'⚡ 21 มิ.ย.', qty:41},
-  {key:'23/06', label:'📦 23 มิ.ย.', qty:101},
+  {key:'21/06', label:'⚡ 21 มิ.ย.', qty:30},
+  {key:'23/06', label:'📦 23 มิ.ย.', qty:21},
   {key:'25/06', label:'🌿 25 มิ.ย.', qty:15},
-  {key:'28/06', label:'🎁 28 มิ.ย.', qty:125},
-  {key:'30/06', label:'🌊 30 มิ.ย.', qty:71},
+  {key:'28/06', label:'🎁 28 มิ.ย.', qty:124},
+  {key:'30/06', label:'🌊 30 มิ.ย.', qty:83},
   {key:'02/07', label:'☁️ 2 ก.ค.', qty:50},
+  {key:'05/07', label:'🎀 5 ก.ค.', qty:34},
+  {key:'07/07', label:'🌅 7 ก.ค.', qty:30},
+  {key:'09/07', label:'📬 9 ก.ค.', qty:60},
   {key:'10/07', label:'📮 10 ก.ค.', qty:18},
-  {key:'14/07', label:'🫒 14 ก.ค.', qty:15},
+  {key:'14/07', label:'🫒 14 ก.ค.', qty:35},
 ];
 
-const MAX_QTY = 125;
+const MAX_QTY = 124;
 let activeDate = 'all';
 let searchQ = '';
 
-function brandClass(b){ return b==='Pulsetto'?'pulsetto':b==='Google'?'google':b==='blueprint'?'blueprint':''; }
+function brandClass(b){ return b==='Pulsetto'?'pulsetto':b==='Google'?'google':b==='blueprint'?'blueprint':b==='Poubel'?'poubel':''; }
+function shipClass(s){ const m={'Bestship':'bestship','ShipToThai':'shiptothai','ThaiSmile':'thaismile','Best UK':'bestuk'}; return 'ship-'+(m[s]||''); }
 
 function pilClass(cls){ return cls==='today'?'today':cls==='soon'?'soon':''; }
 
@@ -460,6 +507,7 @@ function renderTableFixed(){
       <td class="eta-cell"><span class="eta-pill ${p[6]==='today'?'today':p[6]==='soon'?'soon':''}">
         <span class="dot"></span>${p[5]}
       </span></td>
+      <td>${p[7]?`<span class="ship-tag ${shipClass(p[7])}">${p[7]}</span>`:''}</td>
     </tr>
   `).join('');
 }
